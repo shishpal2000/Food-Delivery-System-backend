@@ -1,0 +1,46 @@
+# Python Stuff
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+
+# Virtual Environment
+venv/
+env/
+.venv/
+.env/
+venv.bak/
+
+# Django Specific
+/media/
+*.log
+staticfiles/
+static/
+build/
+dist/
+*.egg-info/
+db.sqlite3
+
+# Environment Files
+.env
+.env.local
+.env.*.local
+
+
+
+# OS & Editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile*
+docker-compose*
+*.log

@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+
+  web:
+    build: .
+    container_name: food_delivery_app
+    command: >
+      sh -c "python manage.py migrate &&
+             gunicorn food_delivery.wsgi:application --bind 0.0.0.0:8000"
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=1
+      - DJANGO_SETTINGS_MODULE=food_delivery.settings
+    restart: always
